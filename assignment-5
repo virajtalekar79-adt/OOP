@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+    int rollNo;
+    string name;
+    char grade;
+
+    Student(int rollNo, string name, char grade)
+    {
+        this->rollNo = rollNo;
+        this->name = name;
+        this->grade = grade;
+    }
+
+    void showDetails()
+    {
+        cout << "\nRoll Number: " << rollNo;
+        cout << "\nStudent Name: " << name;
+        cout << "\nStudent Grade: " << grade;
+        cout << "\n--------------------------";
+    }
+};
+
+int main()
+{
+    Student s1(101, "Rahul", 'A');
+    Student s2(102, "Sneha", 'B');
+
+    s1.showDetails();
+    s2.showDetails();
+
+    return 0;
+}
