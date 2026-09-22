@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class book
+{
+public:
+    string book_id, book_name, book_author;
+
+    book()
+    {
+        book_id = "00";
+        book_name = "None";
+        book_author = "Unknown";
+    }
+
+    book(string id, string name, string author)
+    {
+        book_id = id;
+        book_name = name;
+        book_author = author;
+    }
+
+    void displayBook()
+    {
+        cout << "\nBook ID       : " << book_id << endl;
+        cout << "Book Name     : " << book_name << endl;
+        cout << "Book Author   : " << book_author << endl;
+        cout << "----------------------------" << endl;
+    }
+};
+
+int main()
+{
+    book book1;
+    book book2("101", "C++", "Bjarne");
+    book book3;
+
+    book1.displayBook();
+    book2.displayBook();
+    book3.displayBook();
+
+    return 0;
+}
